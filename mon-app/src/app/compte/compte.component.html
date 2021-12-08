@@ -1,0 +1,125 @@
+<form ng-submit="formOnValidate" method="get" class="form-example">
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="nom">Nom</span>
+        <input type="text" class="form-control" placeholder="Nom" aria-label="nom" aria-describedby="nom" value="Dupont" name="nom" [(ngModel)]="nom" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="prenom">Prénom</span>
+        <input type="text" class="form-control" placeholder="Prenom" aria-label="prenom" aria-describedby="prenom" value="Georges" name="prenom" [(ngModel)]="prenom" required>
+    </div>
+      
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="adresse">Adresse</span>
+        <input type="text" class="form-control" placeholder="Adresse" aria-label="adresse" aria-describedby="adresse" value="10 Rue des Fleurs" name="adresse" [(ngModel)]="adresse" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="codePostal">Code Postal</span>
+        <input type="number" class="form-control" placeholder="Code Postal" aria-label="codePostal" aria-describedby="codePostal" value="67000" name="codePostal" [(ngModel)]="code" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="ville">Ville</span>
+        <input type="text" class="form-control" placeholder="Ville" aria-label="ville" aria-describedby="ville" value="Strasbourg" [(ngModel)]="ville" name="ville" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="telephone">Téléphone</span>
+        <input type="text" class="form-control" placeholder="Telephone" aria-label="telephone" aria-describedby="telephone" value="0606060606" [(ngModel)]="tel" name="tel" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="email">Email</span>
+        <input type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="email" value="gdupont@gmail.com" name="mail" [(ngModel)]="mail" required>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="civilite" id="homme" checked>
+        <label class="form-check-label" for="homme">Homme</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="civilite" id="femme">
+        <label class="form-check-label" for="femme">Femme</label>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="login">Login</span>
+        <input type="text" class="form-control" placeholder="Login" aria-label="login" aria-describedby="login" value="login1" [(ngModel)]="login" name="login" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="password">Mot de passe</span>
+        <input type="password" class="form-control" placeholder="Mot de passe" aria-label="password" aria-describedby="password" value="mdp1" [(ngModel)]="mdp" name="mdp" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="password-confirm">Confirmation du mot de passe</span>
+        <input type="password" class="form-control" placeholder="Confirmation du mot de passe" aria-label="password-confirm" aria-describedby="password-confirm" value="mdp1" name="mdpConfirm" [(ngModel)]="mdpConfirm" required>
+    </div>
+
+    <div class="form-submit">
+      <input class="btn btn-success" type="submit" (click)="formOnValidate()" value="Valider">
+    </div>
+
+</form>
+
+<h1>Récapitulatif</h1>
+
+<form action="" method="get" class="form-example">
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="nom">Nom</span>
+        <input type="text" class="form-control" placeholder="Nom" aria-label="nom" aria-describedby="nom" name="nom" [(ngModel)]="nomV" disabled required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="prenom">Prénom</span>
+        <input type="text" class="form-control" placeholder="Prenom" aria-label="prenom" aria-describedby="prenom" name="prenom" [(ngModel)]="prenomV" disabled required>
+    </div>
+      
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="adresse">Adresse</span>
+        <input type="text" class="form-control" placeholder="Adresse" aria-label="adresse" aria-describedby="adresse" name="adresse" [(ngModel)]="adresseV" disabled required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="codePostal">Code Postal</span>
+        <input type="number" class="form-control" placeholder="Code Postal" aria-label="codePostal" aria-describedby="codePostal" name="codePostal" [(ngModel)]="codeV" disabled required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="ville">Ville</span>
+        <input type="text" class="form-control" placeholder="Ville" aria-label="ville" aria-describedby="ville" value="Strasbourg" [(ngModel)]="villeV" name="ville" disabled required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="telephone">Téléphone</span>
+        <input type="text" class="form-control" placeholder="Telephone" aria-label="telephone" aria-describedby="telephone" name="tel" [(ngModel)]="telV" disabled required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="email">Email</span>
+        <input type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="email" name="mail" [(ngModel)]="mailV" disabled required>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="civilite" id="homme" checked>
+        <label class="form-check-label" for="homme">Homme</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="civilite" id="femme">
+        <label class="form-check-label" for="femme">Femme</label>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="login">Login</span>
+        <input type="text" class="form-control" placeholder="Login" aria-label="login" aria-describedby="login"  name="login" [(ngModel)]="loginV" disabled required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="password">Mot de passe</span>
+        <input type="password" class="form-control" placeholder="Mot de passe" aria-label="password" aria-describedby="password"  name="mdp" [(ngModel)]="mdpV" disabled required>
+    </div>
+</form>
